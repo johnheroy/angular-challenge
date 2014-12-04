@@ -13,9 +13,16 @@
 
     $scope.data = {};
     $scope.data.products = [];
+    $scope.comment = {};
 
     $scope.setActiveProduct = function(product){
       $scope.activeProduct = product;
+    };
+
+    $scope.addNewComment = function(){
+      $scope.comment.date = Date.now();
+      $scope.activeProduct.comments.push($scope.comment);
+      $scope.comment = {};
     };
 
     activate();

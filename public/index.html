@@ -28,10 +28,13 @@
             <h3 class="comments-title">Comments</h3>
             <ul ng-repeat="comment in activeProduct.comments">
               <li>
-                {{ comment.body }}
+                {{ comment.body }} - {{ comment.date | date:"short" }}
               </li>
             </ul>
-            <input type="text">
+            <form ng-submit="addNewComment()">
+              <input type="text" class="form-control" ng-model="comment.body"
+                placeholder="Write a new comment">
+            </form>
           </div>
         </div>
         <div class="col-md-2"></div>
