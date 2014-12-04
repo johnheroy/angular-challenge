@@ -7,4 +7,6 @@
 ```
 npm install
 bower install
+node db/db-setup.js
+npm start
 ```
