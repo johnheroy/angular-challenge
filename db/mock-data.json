@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "name": "Mr Coffee 12 Cup Machine",
+      "description": "Great solid coffeemaker",
+      "price": 29.95,
+      "pictureUrl": "img/mr-coffee.png"
+    },
+    {
+      "name": "Nespresso",
+      "description": "Crisp beautiful espresso with the convenience of disposal cups",
+      "price": 200,
+      "pictureUrl": "img/nespresso.png"
+    },
+    {
+      "name": "Aeropress",
+      "description": "Best coffee for your value",
+      "price": 25.43,
+      "pictureUrl": "img/aeropress.jpg"
+    }
+  ]
+}

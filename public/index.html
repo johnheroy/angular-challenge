@@ -7,9 +7,21 @@
     <script src="bower_components/ui-router/release/angular-ui-router.min.js"></script>
   </head>
   <body ng-app="myApp">
-    <div class="container" ng-controller="ProductsController as productsCtrl">
+    <div class="container" ng-controller="ProductsController">
       <div class="row">
-
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+          <h2>Product List</h2>
+          <ul ng-repeat="product in data.products">
+            <li>
+              {{ product.name }}
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h2>Product View</h2>
+        </div>
+        <div class="col-md-2"></div>
       </div>
     </div>
 
