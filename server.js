@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var products = require('./lib/products-handler');
 var app = express();
 
 var bodyParser = require('body-parser');
@@ -11,7 +12,7 @@ app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
-// other routes
+app.get('/api/products', products.getAllProducts);
 
 var port = process.env.PORT || 3000;
 app.listen(port, function(){
