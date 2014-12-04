@@ -1,0 +1,16 @@
+.products-list {
+  list-style: none;
+}
+
+.products-list li {
+  cursor: pointer;
+}
+
+.product-picture {
+  height: 400px;
+  float: right;
+}
+
+.comments-title {
+  clear: both;
+}

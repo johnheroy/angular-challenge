@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>Wirestorm Angular Challenge</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/ui-router/release/angular-ui-router.min.js"></script>
   </head>
@@ -12,14 +13,26 @@
         <div class="col-md-2"></div>
         <div class="col-md-4">
           <h2>Product List</h2>
-          <ul ng-repeat="product in data.products">
-            <li>
+          <ul ng-repeat="product in data.products" class="products-list">
+            <li ng-click="setActiveProduct(product)">
               {{ product.name }}
             </li>
           </ul>
         </div>
         <div class="col-md-6">
           <h2>Product View</h2>
+          <div ng-hide="activeProduct === undefined">
+            <h3>{{ activeProduct.name }}</h3>
+            <em>{{ activeProduct.price | currency }}</em>
+            <img class="product-picture" src="{{ activeProduct.pictureUrl }}">
+            <h3 class="comments-title">Comments</h3>
+            <ul ng-repeat="comment in activeProduct.comments">
+              <li>
+                {{ comment.body }}
+              </li>
+            </ul>
+            <input type="text">
+          </div>
         </div>
         <div class="col-md-2"></div>
       </div>

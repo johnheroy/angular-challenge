@@ -14,13 +14,16 @@
     $scope.data = {};
     $scope.data.products = [];
 
+    $scope.setActiveProduct = function(product){
+      $scope.activeProduct = product;
+    };
+
     activate();
 
     function activate(){
       productsDataservice
         .getAllProducts()
         .success(function(data, status, headers, config){
-          console.log(data);
           $scope.data.products = data;
         })
         .error(function(data, status, headers, config){
